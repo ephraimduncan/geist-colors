@@ -13,7 +13,3 @@ For full documentation, visit [vercel.com/geist/colors](https://vercel.com/geist
 ## Installation
 
 `pnpm add geist-colors`
-
-## Authors
-
--   Ephraim Duncan ([@ephraimduncan\_](https://twitter.com/ephraimduncan_))
