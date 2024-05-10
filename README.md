@@ -1,20 +1,19 @@
-[![Radix Colors Logo](colors.png)](https://radix-ui.com/colors)
+# Geist Design System Colors
 
-# Radix Colors
-
-**A gorgeous, accessible color system.**
-
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/colors-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/colors-light.png">
+  <img src="./assets/colors-light.png" alt="Geist Colors">
+</picture>
 
 ## Documentation
 
-For full documentation, visit [radix-ui.com/colors/docs](https://radix-ui.com/colors/docs).
+For full documentation, visit [vercel.com/geist/colors](https://vercel.com/geist/colors).
 
 ## Installation
 
-`yarn add @radix-ui/colors`
+`pnpm add geist-colors`
 
 ## Authors
 
-- Colm Tuite ([@colmtuite](https://twitter.com/colmtuite))
-- Vlad Moroz ([@vladyslavmoroz](https://twitter.com/vladyslavmoroz))
+-   Ephraim Duncan ([@ephraimduncan\_](https://twitter.com/ephraimduncan_))
