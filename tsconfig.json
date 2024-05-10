@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "dist",
+        "outDir": ".",
         "declarationDir": "types",
         "module": "esnext",
         "target": "ES2019",
