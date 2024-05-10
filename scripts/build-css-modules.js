@@ -23,18 +23,21 @@ Object.keys(allColorScales)
         const srgbValues = Object.entries(allColorScales).find(([name]) => name === key)[1];
 
         const srgbCssProperties = Object.entries(srgbValues)
-            .map(([name, value]) => [toCssCasing(name), value])
+            .map(([name, value]) => [toCssCasing(`${key}-${name}`), value])
             .map(([name, value]) => `  --${name}: ${value};`)
             .join("\n");
 
         const srgbCssRule = `${selector} {\n${srgbCssProperties}\n}`;
 
-        const p3Values = Object.entries(allColorScales).find(
-            ([name]) => name === key + "P3" || name === key.replace(/.$/, "P3A")
-        )[1];
+        if (!Object.entries(allColorScales).find(([name]) => name === key + "P3")) {
+            fs.writeFileSync(path.join(outputDir, toFileName(key) + ".css"), srgbCssRule);
+            return;
+        }
+
+        const p3Values = Object.entries(allColorScales).find(([name]) => name === key + "P3")[1];
 
         const p3CssProperties = Object.entries(p3Values)
-            .map(([name, value]) => [toCssCasing(name), value])
+            .map(([name, value]) => [toCssCasing(`${key}-${name}`), value])
             .map(([name, value]) => `      --${name}: ${value};`)
             .join("\n");
 
